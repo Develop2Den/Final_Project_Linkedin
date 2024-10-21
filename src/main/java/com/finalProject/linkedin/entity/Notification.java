@@ -1,5 +1,6 @@
 package com.finalProject.linkedin.entity;
 
+import com.finalProject.linkedin.utils.enums.TargetType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,7 +30,7 @@ public class Notification {
     @Column(name = "message")
     private String message;
     @Column(name = "type")
-    private String notificationType;
+    private TargetType notificationType;
     @CreationTimestamp
     private LocalDateTime createdAt;
     private LocalDateTime deletedAt;
